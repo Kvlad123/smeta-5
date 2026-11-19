@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Смета за 5 — offline-редактор понятных смет и коммерческих предложений для фрилансеров. Без подписки, регистрации и передачи данных.">
+  <meta name="theme-color" content="#17231e">
+  <meta property="og:title" content="Смета за 5 — смета, которую не страшно отправить">
+  <meta property="og:description" content="Соберите профессиональную смету, сохраните проекты и экспортируйте PDF. Разовая покупка, работа offline.">
+  <meta property="og:type" content="website">
+  <title>Смета за 5 — редактор смет для фрилансеров</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="config.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">К содержанию</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top">
+        <span class="brand-mark" aria-hidden="true">С5</span>
+        <span>Смета за 5</span>
+      </a>
+      <nav class="nav" aria-label="Основная навигация">
+        <a href="#calculator">Калькулятор</a>
+        <a href="#inside">Возможности</a>
+        <a href="#faq">Вопросы</a>
+      </nav>
+      <button class="button button-small button-dark" type="button" data-buy>Купить за <span data-price>490 ₽</span></button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow"><span></span> Для фрилансеров и небольших студий</div>
+          <h1>Смета, которую не&nbsp;страшно отправить клиенту</h1>
+          <p class="hero-lead">Превратите список работ в аккуратное коммерческое предложение. Без сложных таблиц, подписки и передачи клиентских данных.</p>
+          <div class="hero-actions">
+            <button class="button button-accent" type="button" data-buy>Купить за <span data-price>490 ₽</span> <span aria-hidden="true">↗</span></button>
+            <a class="button button-ghost" href="#calculator">Сначала рассчитать ставку</a>
+          </div>
+          <ul class="trust-list" aria-label="Преимущества покупки">
+            <li>✓ Один платёж</li>
+            <li>✓ Работает offline</li>
+            <li>✓ PDF в один клик</li>
+          </ul>
+        </div>
+
+        <div class="hero-visual" aria-label="Пример готовой сметы">
+          <div class="floating-note note-top"><span class="status-dot"></span> Сохранено локально</div>
+          <article class="estimate-card">
+            <div class="estimate-head">
+              <div>
+                <span class="mini-label">СМЕТА № СМ-024</span>
+                <h2>Новый сайт студии</h2>
+              </div>
+              <span class="estimate-logo">С5</span>
+            </div>
+            <div class="estimate-meta">
+              <div><span>Заказчик</span><strong>Студия «Линия»</strong></div>
+              <div><span>Срок действия</span><strong>14 дней</strong></div>
+            </div>
+            <div class="estimate-lines">
+              <div class="line line-heading"><span>Работа</span><span>Сумма</span></div>
+              <div class="line"><span>Прототип и структура<small>1 проект</small></span><strong>24 000 ₽</strong></div>
+              <div class="line"><span>Дизайн 6 страниц<small>6 страниц × 7 000 ₽</small></span><strong>42 000 ₽</strong></div>
+              <div class="line"><span>Адаптивная вёрстка<small>1 проект</small></span><strong>36 000 ₽</strong></div>
+            </div>
+            <div class="estimate-total"><span>Итого</span><strong>102 000 ₽</strong></div>
+            <div class="estimate-advance"><span>Предоплата 30%</span><span>30 600 ₽</span></div>
+          </article>
+          <div class="floating-note note-bottom"><span aria-hidden="true">↓</span> Готово к экспорту в PDF</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="audience-strip" aria-label="Для кого продукт">
+      <div class="container strip-inner">
+        <span>Дизайнеры</span><i>•</i><span>Разработчики</span><i>•</i><span>Маркетологи</span><i>•</i><span>Копирайтеры</span><i>•</i><span>Небольшие студии</span>
+      </div>
+    </section>
+
+    <section class="section problems">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-number">01 / ЗАЧЕМ</span>
+          <h2>Клиент покупает не часы.<br>Он покупает ясность.</h2>
+          <p>Понятная смета помогает обсудить объём, стоимость и порядок оплаты до начала работы.</p>
+        </div>
+        <div class="feature-grid">
+          <article class="feature-card">
+            <span class="feature-icon" aria-hidden="true">✦</span>
+            <h3>Выглядит профессионально</h3>
+            <p>Аккуратный документ с вашими данными, этапами работ, итогом и размером предоплаты.</p>
+          </article>
+          <article class="feature-card featured">
+            <span class="feature-icon" aria-hidden="true">⌁</span>
+            <h3>Экономит рутину</h3>
+            <p>Готовые шаблоны услуг, автоматические суммы и повторное использование старых проектов.</p>
+          </article>
+          <article class="feature-card">
+            <span class="feature-icon" aria-hidden="true">⌂</span>
+            <h3>Хранит данные у вас</h3>
+            <p>Никаких аккаунтов и облаков. Проекты остаются в браузере, резервная копия выгружается в JSON.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section calculator-section" id="calculator">
+      <div class="container calculator-grid">
+        <div class="calculator-copy">
+          <span class="section-number light">БЕСПЛАТНЫЙ ИНСТРУМЕНТ</span>
+          <h2>Узнайте минимальную часовую ставку</h2>
+          <p>Не берите цену «из воздуха». Учтите желаемый доход, оплачиваемые часы, налоги и финансовую подушку.</p>
+          <div class="formula-note">Ставка — ориентир для расчёта стоимости, а не финансовая рекомендация. Не включайте в оплачиваемые часы переговоры, продвижение и административную работу.</div>
+        </div>
+        <form class="calculator-card" id="rate-form">
+          <div class="calc-field calc-wide">
+            <label for="income">Хочу получать на руки в месяц</label>
+            <div class="input-with-unit"><input id="income" name="income" type="number" min="1000" max="100000000" step="1000" value="120000" inputmode="decimal"><span>₽</span></div>
+          </div>
+          <div class="calc-field">
+            <label for="hours">Оплачиваемых часов в месяц</label>
+            <div class="input-with-unit"><input id="hours" name="hours" type="number" min="1" max="744" step="1" value="80" inputmode="numeric"><span>ч</span></div>
+          </div>
+          <div class="calc-field">
+            <label for="tax">Налоги, % от выручки</label>
+            <div class="input-with-unit"><input id="tax" name="tax" type="number" min="0" max="60" step="0.1" value="6" inputmode="decimal"><span>%</span></div>
+          </div>
+          <div class="calc-field calc-wide">
+            <label for="reserve">Резерв на простой и расходы</label>
+            <div class="range-row"><input id="reserve" name="reserve" type="range" min="0" max="40" step="1" value="10"><output id="reserve-output" for="reserve">10%</output></div>
+          </div>
+          <p class="form-error" id="calc-error" role="alert" hidden></p>
+          <div class="calc-result" aria-live="polite">
+            <span>Рекомендуемая ставка</span>
+            <strong id="rate-result">1 790 ₽<small>/ час</small></strong>
+            <div class="result-details"><span>Выручка: <b id="revenue-result">142 858 ₽</b></span><span>Рабочий день: <b id="day-result">14 320 ₽</b></span></div>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section class="section" id="inside">
+      <div class="container">
+        <div class="section-heading horizontal-heading">
+          <div><span class="section-number">02 / ВНУТРИ</span><h2>Всё для спокойного старта проекта</h2></div>
+          <p>Откройте один HTML-файл в современном браузере — редактор готов. Установка и интернет не нужны.</p>
+        </div>
+        <div class="inside-grid">
+          <article class="inside-card inside-large editor-preview">
+            <div class="inside-copy"><span class="tag">РЕДАКТОР</span><h3>Смета собирается как конструктор</h3><p>Добавляйте услуги, меняйте количество и цену. Сумма, скидка и предоплата пересчитываются сами.</p></div>
+            <div class="fake-editor" aria-hidden="true">
+              <div class="fake-toolbar"><i></i><i></i><i></i><span>Новый проект</span></div>
+              <div class="fake-editor-body"><div class="fake-sidebar"><b></b><b></b><b></b><b></b></div><div class="fake-paper"><span></span><strong></strong><i></i><i></i><i></i><em></em></div></div>
+            </div>
+          </article>
+          <article class="inside-card"><span class="tag">PDF</span><h3>Готово к отправке</h3><p>Печатная версия без лишних кнопок. Выберите «Сохранить как PDF» в диалоге браузера.</p><div class="big-symbol" aria-hidden="true">↓</div></article>
+          <article class="inside-card"><span class="tag">ШАБЛОНЫ</span><h3>Не начинайте с нуля</h3><p>Примеры услуг для дизайна, разработки и маркетинга. Свои проекты можно дублировать.</p><div class="template-chips"><span>Дизайн</span><span>Разработка</span><span>Маркетинг</span></div></article>
+          <article class="inside-card inside-large privacy-card"><div><span class="tag">ПРИВАТНОСТЬ</span><h3>Клиенты остаются вашими</h3><p>Редактор не отправляет данные на сервер: нет аналитики, регистрации и внешних сервисов. Экспортируйте резервные копии и храните их там, где удобно вам.</p></div><div class="privacy-seal" aria-hidden="true">100%<span>на устройстве</span></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section steps-section">
+      <div class="container">
+        <div class="section-heading"><span class="section-number">03 / КАК ЭТО РАБОТАЕТ</span><h2>От покупки до готовой сметы — три шага</h2></div>
+        <ol class="steps-list">
+          <li><span>1</span><div><h3>Скачайте и откройте</h3><p>Распакуйте ZIP и откройте HTML-файл в Chrome, Firefox, Edge или Safari.</p></div></li>
+          <li><span>2</span><div><h3>Заполните проект</h3><p>Добавьте реквизиты и работы вручную или выберите готовый шаблон.</p></div></li>
+          <li><span>3</span><div><h3>Сохраните PDF</h3><p>Проверьте предпросмотр, нажмите «Печать / PDF» и отправьте документ клиенту.</p></div></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section pricing-section" id="buy">
+      <div class="container pricing-grid">
+        <div class="pricing-copy"><span class="section-number light">ОДИН ПЛАТЁЖ. БЕЗ ПОДПИСКИ.</span><h2>Окупается одной сэкономленной переделкой</h2><p>Не обещаем увеличить ваш доход. Просто даём удобный инструмент, который помогает быстрее подготовить понятную смету.</p></div>
+        <div class="price-card">
+          <div class="price-card-head"><span>Смета за 5</span><span class="license-badge">Личная лицензия</span></div>
+          <div class="price"><strong data-price>490 ₽</strong><span>навсегда</span></div>
+          <ul>
+            <li>Offline-редактор смет</li>
+            <li>Все шаблоны и автосохранение</li>
+            <li>Экспорт PDF и резервных копий JSON</li>
+            <li>Обновления текущей версии</li>
+            <li>Понятная инструкция в комплекте</li>
+          </ul>
+          <button class="button button-accent button-full" type="button" data-buy>Купить и скачать <span aria-hidden="true">↗</span></button>
+          <p class="price-note">Оплата и выдача файла происходят на странице продавца. Перед покупкой ознакомьтесь с условиями площадки.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section faq-section" id="faq">
+      <div class="container faq-grid">
+        <div><span class="section-number">04 / ВОПРОСЫ</span><h2>Коротко о важном</h2></div>
+        <div class="faq-list">
+          <details><summary>Это программа или онлайн-сервис?<span>+</span></summary><p>Это offline-приложение в одном HTML-файле. Оно открывается в браузере, но не требует интернет и не отправляет данные на сервер.</p></details>
+          <details><summary>Где хранятся мои сметы?<span>+</span></summary><p>В локальном хранилище вашего браузера. Очистка данных браузера может их удалить, поэтому регулярно используйте «Экспорт» для резервной копии JSON.</p></details>
+          <details><summary>Можно пользоваться на телефоне?<span>+</span></summary><p>Интерфейс адаптирован для небольших экранов, но удобнее всего заполнять сметы и сохранять PDF на компьютере. Поведение загрузок зависит от мобильного браузера.</p></details>
+          <details><summary>Нужно платить каждый месяц?<span>+</span></summary><p>Нет. Вы платите один раз за текущую лицензию. Для работы редактора не нужны наши серверы, поэтому подписки нет.</p></details>
+          <details><summary>Можно вернуть деньги?<span>+</span></summary><p>Если файл технически не открывается, напишите в поддержку — сначала поможем решить проблему. Условия возврата цифрового товара указываются на странице оплаты с учётом применимого законодательства.</p></details>
+          <details><summary>Можно перепродавать файл?<span>+</span></summary><p>Нет. Лицензия разрешает использовать редактор в своей работе и создавать неограниченное число смет, но не перепродавать или публиковать исходный файл.</p></details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <a class="brand footer-brand" href="#top"><span class="brand-mark">С5</span><span>Смета за 5</span></a>
+      <p>Инструмент для ясной работы.<br>Сделано без сбора персональных данных.</p>
+      <div class="footer-links"><a href="#calculator">Калькулятор ставки</a><a href="#faq">Поддержка и FAQ</a><a id="support-link" href="#" hidden>Написать в поддержку</a></div>
+      <span class="copyright">© <span id="year">2026</span> Смета за 5</span>
+    </div>
+  </footer>
+
+  <dialog class="purchase-dialog" id="purchase-dialog" aria-labelledby="dialog-title">
+    <button class="dialog-close" type="button" aria-label="Закрыть" data-close-dialog>×</button>
+    <span class="brand-mark" aria-hidden="true">С5</span>
+    <h2 id="dialog-title">Оплата ещё не настроена</h2>
+    <p id="dialog-text">Владельцу сайта нужно добавить ссылку на страницу оплаты в <code>public/config.js</code> и повторить сборку.</p>
+    <a class="button button-accent button-full" id="payment-link" href="#" target="_blank" rel="noopener" hidden>Перейти к оплате <span aria-hidden="true">↗</span></a>
+    <button class="button button-ghost button-full" type="button" data-close-dialog>Понятно</button>
+  </dialog>
+  <noscript><div class="noscript">Для калькулятора и кнопки покупки нужен JavaScript. Содержимое страницы доступно и без него.</div></noscript>
+</body>
+</html>
