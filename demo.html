@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Демо редактора смет — попробовать без регистрации</title>
+  <meta name="description" content="Заполните демонстрационную смету в браузере: три позиции, автоматический итог и печать. Без регистрации и сохранения данных.">
+  <link rel="canonical" href="https://kvlad123.github.io/smeta-5/demo.html"><meta property="og:title" content="Демо «Смета за 5»"><meta property="og:description" content="Попробуйте редактор сметы прямо в браузере."><meta property="og:type" content="website"><meta property="og:image" content="https://kvlad123.github.io/smeta-5/og-image.png">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="content.css"><script src="config.js" defer></script><script src="app.js" defer></script><script src="demo.js" defer></script>
+</head>
+<body>
+<header class="content-header"><div class="container header-inner"><a class="brand" href="index.html"><span class="brand-mark">С5</span><span>Смета за 5</span></a><button class="button button-small button-dark" type="button" data-buy>Полная версия · <span data-price>490 ₽</span></button></div></header>
+<main class="content-main"><div class="container">
+  <nav class="breadcrumbs" aria-label="Хлебные крошки"><a href="index.html">Главная</a><span>→</span><span>Демо</span></nav>
+  <section class="content-hero"><span class="section-number">БЕСПЛАТНОЕ ДЕМО · ДАННЫЕ НЕ СОХРАНЯЮТСЯ</span><h1>Попробуйте собрать смету</h1><p>Измените название, заказчика и три позиции. Итог пересчитается автоматически. После перезагрузки демо вернётся к примеру.</p></section>
+  <div class="demo-shell">
+    <section class="demo-panel no-print" aria-label="Редактор демо">
+      <h2>Проект</h2>
+      <div class="demo-field"><label for="demo-title">Название</label><input id="demo-title" maxlength="100" value="Дизайн лендинга"></div>
+      <div class="demo-field"><label for="demo-client">Заказчик</label><input id="demo-client" maxlength="100" value="ООО «Пример»"></div>
+      <div class="demo-field"><label for="demo-provider">Исполнитель</label><input id="demo-provider" maxlength="100" value="Ваше имя"></div>
+      <h2>Работы</h2><div class="demo-items" id="demo-items"></div>
+      <div class="demo-actions"><button class="button button-small button-ghost" id="demo-print" type="button">Печать демо</button><button class="button button-small button-accent" type="button" data-buy>Полная версия</button></div>
+      <p class="demo-limit">В полной версии: до 100 проектов, 200 строк в каждом, шаблоны, скидка, предоплата, автосохранение, offline-работа и JSON-копии.</p>
+    </section>
+    <article class="demo-paper" aria-label="Предпросмотр демо-сметы">
+      <div class="demo-paper-header"><div><span class="mini-label">ДЕМО-СМЕТА</span><h2 id="preview-demo-title">Дизайн лендинга</h2></div><span class="estimate-logo">С5</span></div>
+      <div class="demo-paper-meta"><div><span>Исполнитель</span><strong id="preview-demo-provider">Ваше имя</strong></div><div><span>Заказчик</span><strong id="preview-demo-client">ООО «Пример»</strong></div></div>
+      <table class="demo-table"><thead><tr><th>Работа</th><th>Кол-во</th><th>Цена</th><th>Сумма</th></tr></thead><tbody id="preview-demo-items"></tbody></table>
+      <div class="demo-total"><span>Итого</span><span id="preview-demo-total">0 ₽</span></div>
+      <div class="demo-watermark">Демонстрационный документ. Полная версия убирает эту пометку и сохраняет проекты на вашем устройстве.</div>
+    </article>
+  </div>
+</div></main>
+<footer class="content-footer"><div class="container"><span>© 2026 Смета за 5</span><a href="rate-guide.html">Гид по ставке</a></div></footer>
+</body></html>

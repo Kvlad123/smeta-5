@@ -11,7 +11,8 @@
   document.querySelectorAll("[data-price]").forEach((element) => {
     element.textContent = `${money.format(price)} ${currency}`;
   });
-  document.getElementById("year").textContent = String(new Date().getFullYear());
+  const year = document.getElementById("year");
+  if (year) year.textContent = String(new Date().getFullYear());
 
   const dialog = document.getElementById("purchase-dialog");
   const dialogTitle = document.getElementById("dialog-title");
@@ -29,6 +30,11 @@
   document.querySelectorAll("[data-buy]").forEach((button) => {
     button.addEventListener("click", () => {
       const configured = Boolean(paymentUrl);
+      if (!dialog) {
+        if (configured) window.open(paymentUrl, "_blank", "noopener");
+        else window.alert("Оплата ещё не настроена. Владельцу нужно добавить ссылку в config.js.");
+        return;
+      }
       dialogTitle.textContent = configured ? "Покупка «Смета за 5»" : "Оплата ещё не настроена";
       dialogText.textContent = configured
         ? "Вы перейдёте на страницу продавца. После оплаты площадка выдаст ZIP-комплект с редактором и инструкцией."
@@ -44,7 +50,7 @@
   document.querySelectorAll("[data-close-dialog]").forEach((button) => {
     button.addEventListener("click", () => dialog.close());
   });
-  dialog.addEventListener("click", (event) => {
+  if (dialog) dialog.addEventListener("click", (event) => {
     if (event.target !== dialog) return;
     const bounds = dialog.getBoundingClientRect();
     const inside = event.clientX >= bounds.left && event.clientX <= bounds.right
@@ -55,13 +61,14 @@
   const supportEmail = typeof config.supportEmail === "string"
     ? config.supportEmail.trim()
     : "";
-  if (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(supportEmail)) {
-    const supportLink = document.getElementById("support-link");
+  const supportLink = document.getElementById("support-link");
+  if (supportLink && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(supportEmail)) {
     supportLink.href = `mailto:${supportEmail}`;
     supportLink.hidden = false;
   }
 
   const form = document.getElementById("rate-form");
+  if (!form) return;
   const fields = {
     income: document.getElementById("income"),
     hours: document.getElementById("hours"),

@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
 
-# После покупки домена добавьте строку:
-# Sitemap: https://ваш-домен.ru/sitemap.xml
+Sitemap: https://kvlad123.github.io/smeta-5/sitemap.xml
